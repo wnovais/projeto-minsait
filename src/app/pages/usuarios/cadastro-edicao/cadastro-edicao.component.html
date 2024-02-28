@@ -1,1 +1,23 @@
-<p>cadastro-edicao works!</p>
+<br>
+<app-page-tittle *ngIf="!id" title="Cadastro de Usuários"></app-page-tittle>
+<app-page-tittle *ngIf="id" title="Editar Usuário"></app-page-tittle>
+<br>
+<form [formGroup]="usuarioForm" (submit)="cadastrarUsuarios()">
+    <div class="row">
+        <div class="col ms-5">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" formControlName="nome">
+                <div *ngIf="usuarioForm.get('nome')?.errors?.['required']" class="form-text text-danger">Campo obrigatório.</div>
+              </div>
+        </div>
+        <div class="col me-5">
+            <div class="mb-3">
+                <label for="idade" class="form-label">Idade</label>
+                <input type="number" class="form-control" id="idade" formControlName="idade">
+              </div>
+        </div>
+    </div>
+    <button *ngIf="!id" type="submit" class="btn btn-success ms-5" [disabled]="usuarioForm.invalid">Cadastrar</button>
+    <button *ngIf="id" type="submit" class="btn btn-success ms-5" [disabled]="usuarioForm.invalid">Salvar</button>
+</form>

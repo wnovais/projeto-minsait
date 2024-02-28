@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Rafael Ferreira",
+      "idade": 19,
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Lucas Ferreira",
+      "idade": 35,
+      "ativo": false
+    },
+    {
+      "nome": "Willian",
+      "idade": 29,
+      "ativo": true,
+      "id": 3
+    },
+    {
+      "nome": "teste",
+      "idade": 10,
+      "ativo": true,
+      "id": 4
+    }
+  ]
+}
