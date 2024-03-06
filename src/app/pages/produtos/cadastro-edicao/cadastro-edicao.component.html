@@ -1,1 +1,35 @@
-<p>cadastro-edicao works!</p>
+<br>
+<app-page-tittle *ngIf="!id" title="Cadastro de Produtos"></app-page-tittle>
+<app-page-tittle *ngIf="id" title="Editar Produto"></app-page-tittle>
+<br>
+<form [formGroup]="produtoForm" (submit)="cadastrarProdutos()">
+    <div class="row">
+        <div class="col ms-5">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" formControlName="nome">
+                <div *ngIf="produtoForm.get('nome')?.errors?.['required']" class="form-text text-danger">Campo obrigatório.</div>
+              </div>
+        </div>
+        <div class="col me-5">
+            <div class="mb-3">
+                <label for="codigoBarras" class="form-label">Código de Barras</label>
+                <input type="text" class="form-control" id="codigoBarras" formControlName="codigoBarras">
+              </div>
+        </div>
+        <div class="col me-5">
+            <div class="mb-3">
+                <label for="quantidade" class="form-label">Quantidade</label>
+                <input type="number" class="form-control" id="quantidade" formControlName="quantidade">
+              </div>
+        </div>
+        <div class="col me-5">
+            <div class="mb-3">
+                <label for="preco" class="form-label">Preço</label>
+                <input type="number" class="form-control" id="preco" formControlName="preco">
+              </div>
+        </div>
+    </div>
+    <button *ngIf="!id" type="submit" class="btn btn-success ms-5" [disabled]="produtoForm.invalid">Cadastrar</button>
+    <button *ngIf="id" type="submit" class="btn btn-success ms-5" [disabled]="produtoForm.invalid">Salvar</button>
+</form>

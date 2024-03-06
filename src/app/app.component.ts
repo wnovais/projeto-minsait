@@ -17,7 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
               RouterLink, 
               CommonModule, 
               HttpClientModule,
-              ReactiveFormsModule]
+              ReactiveFormsModule,]
 })
 export class AppComponent {
   title = 'projeto-minsait';

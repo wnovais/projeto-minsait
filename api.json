@@ -13,16 +13,25 @@
       "ativo": false
     },
     {
-      "nome": "Willian",
-      "idade": 29,
-      "ativo": true,
-      "id": 3
+      "id": 3,
+      "nome": "teste",
+      "idade": 23,
+      "ativo": true
     },
     {
-      "nome": "teste",
-      "idade": 10,
-      "ativo": true,
-      "id": 4
+      "id": 4,
+      "nome": "aaa1",
+      "idade": 1,
+      "ativo": true
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nomeProduto": "iPhone 13",
+      "codigoBarras": "5012345678900",
+      "quantidade": 5,
+      "preco": 5000
     }
   ]
 }
