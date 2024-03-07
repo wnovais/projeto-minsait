@@ -23,8 +23,8 @@ export class CadastroEdicaoProdutosComponent {
   produtoForm = new FormGroup({
     nome: new FormControl('', Validators.required),
     codigoBarras: new FormControl('', [Validators.minLength(13), Validators.maxLength(13), Validators.required]),
-    quantidade: new FormControl(),
-    preco: new FormControl(),
+    quantidade: new FormControl(0, [Validators.min(1), Validators.required]),
+    preco: new FormControl(0, [Validators.min(1), Validators.required]),
   })
 
   id: number = 0;

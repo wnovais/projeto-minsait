@@ -29,7 +29,9 @@ export class CadastroEdicaoUsuariosComponent {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    
+    //const id = this.route.snapshot.queryParams.id;
+
+
     try {
       const idNumber = Number(id);
 
@@ -48,7 +50,7 @@ export class CadastroEdicaoUsuariosComponent {
   }
 
   cadastrarUsuarios() {
-    const usuario: IUsuario = this.usuarioForm.value as unknown as IUsuario;
+    const usuario: IUsuario = this.usuarioForm.value as IUsuario;
 
     usuario.ativo = true;
 

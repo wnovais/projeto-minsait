@@ -15,6 +15,7 @@
             <div class="mb-3">
                 <label for="codigoBarras" class="form-label">Código de Barras</label>
                 <input type="text" class="form-control" id="codigoBarras" formControlName="codigoBarras">
+                <div *ngIf="produtoForm.get('codigoBarras')?.errors?.['required']" class="form-text text-danger">Campo obrigatório.</div>
               </div>
         </div>
         <div class="col me-5">
